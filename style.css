@@ -1,0 +1,424 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+/* Design typographique -----------------------*/
+
+/* Titre */
+h1,h2,h3,h4,h5,li{
+	font-family: 'Montserrat', sans-serif;
+}
+
+h5{
+	font-size: 20px;
+	color: white;
+	background-color: black;
+	margin-left: 364px;
+}
+
+a{
+	color: black;
+	text-decoration: none;
+	margin-right: 30px;
+}
+
+a:hover{
+	color: #29BDAB;
+}
+/* Textes */
+p,a,li{
+	font-family: 'Montserrat', sans-serif ;
+	font-size: 12px;
+}
+
+/* header -----------------------*/
+
+header{
+	width: 100vw;
+	height: 10vh;
+	font-weight: bolder;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	box-shadow: 0px 0px 2vh rgba(0,0,0,0.5);
+	z-index: 9999;
+}
+
+.logo{
+	height: 8vh;
+	margin-left: 120px;
+	border-radius: 3px;
+}
+
+nav a{
+	margin-right: 25px;
+	font-family: 'Montserrat', sans-serif ;
+	text-decoration: none;
+	color: black;
+}
+.menuFantome{
+	width: 100vw;
+	height: 10vh;
+}
+
+label{
+	font-size: 34px;
+	display: none;
+	margin-right: 30px;
+}
+
+#switch{
+	display: none;
+}
+
+@media(max-width: 600px){
+	nav{
+		display: none;
+		clear: both;
+	}
+	label{
+		display: block;
+		float: right;
+	}
+	#switch:checked + nav{
+		display: flex;
+		flex-direction: column;
+	}
+	header{
+		display: block;
+	}
+	h1{
+		font-size: 35px;
+		float: left;
+	}
+	a.menu{
+		background-color: white;
+		text-align: center;
+		margin-right: 0px;
+		padding: 10px;
+		border-bottom: 2px solid black;
+	}
+}
+
+/* Section 1 -----------------------*/
+
+.section1{
+	width: 100vw;
+	min-height: 80vh;
+	background-image: url(images/lake.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	padding-top: 10vh;
+}
+
+.textsection1{
+	width: 50vw;
+	font-family: 'Montserrat', sans-serif;
+	margin-left: 120px;
+	color: white;
+	background-color: rgba(0,0,0,0.6);
+}
+.plus{
+	display: flex;
+	width: 40px;
+	margin-left: 140px;
+	border-radius: 50%;
+}
+
+@media(max-width: 900px){
+
+	.textsection1{
+		width: 60vw;
+		
+	}
+}
+
+/* Section 2 -----------------------*/
+
+.section2{
+	width: 100vw;
+	min-height: 90vh;
+	background-image: url(images/snow.jpg);
+	box-shadow: 0px -10px 20px rgba(0,0,0,0.5);
+	flex-direction: column;
+	justify-content: center;
+}
+
+.blocsection2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.datesection2{
+	width: 20%;
+	font-size: 50px;
+	text-align: right;
+	color: white;
+	background-color: black;
+
+}
+/*Animations*/ 
+.datesection2:hover{
+	animation-name: ChangementCouleur;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes ChangementCouleur {
+	0%{background-color: #FF3A00;}
+	25%{background-color: #FFDC00}
+	50%{background-color: #15C28B;}
+	100%{background-color: #00AEFF;}
+}
+.imagesection2{
+	width: 15%;
+	margin:20px;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+
+.imagesection2:hover{
+	box-shadow: 0px 0px 10px rgba(0 ,0 ,0 ,0.5);
+	animation-name: Rondeur;
+	animation-duration: 5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes Rondeur {
+	0%{border-radius: 50%;filter: saturate(0);}
+	100%{border-radius: 0px;filter: saturate(1)}
+}
+
+.textsection2{
+	width: 30%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+@media(max-width: 900px){
+	.blocsection2{
+		flex-direction: column;
+	}
+	.textsection2{
+		width: 80%;
+		text-align: center;
+	}
+	.datesection2{
+		width: 40%;
+		text-align: center;
+		margin-top: 10%;
+	}
+	.imagesection2{
+		width: 30%;
+	}
+}
+
+/* Section 3 -----------------------*/
+.section3{
+	width: 100vw;
+	min-height: 70vh;
+	background-image: url(images/mountain.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+
+}
+
+.vest{
+	width: 15vw;
+	height: 30vh;
+	background-image: url(images/veste20.jpg);
+	border: 2px solid black;
+	font-size: 35px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.sac{
+	width: 15vw;
+	height: 30vh;
+	background-image: url(images/sac60.jpg);
+	border: 2px solid black;
+	font-size: 35px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.tent{
+	width: 15vw;
+	height: 27vh;
+	background-image: url(images/tent40.jpg);
+	border: 2px solid black;
+	font-size: 35px;
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+.blocpictext{
+	display: flex;
+	justify-content: center;
+}
+
+
+.textsection3{
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	background-color: rgba(0,0,0,0.4);
+	width: 30%;
+	margin-left: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.titresection3{
+	width: 15.3vw;	
+}
+
+@media(max-width: 700px){
+	.section3{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.bloc3{
+		width: 55vw;
+		height: 20vh;
+	}
+
+	.titresection3{
+		margin: 0px;
+		width: 56vw;
+	}
+	.textsection3{
+		width: 100%;
+		margin: 0px;
+	}
+	.blocpictext{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.vest{
+		height: 25vh;
+	}
+	.sac{
+		height: 25vh;
+	}
+	.tent{
+		height: 23vh;
+	}
+}
+
+/* Section 4 -----------------------*/
+.section4{
+	width: 100vw;
+	min-height: 75vh;
+	background-image: url(images/snow.jpg);
+	box-shadow: 0px -10px 20px rgba(0,0,0,0.5);
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 10px;
+	padding-bottom: 30vh;
+}
+
+.blocsection4{
+	width: 30vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10%;
+	margin-top: 10%;
+}
+
+.blocsection4right{
+	width: 30vw;
+	display: flex;
+	float: right;
+	align-items: center;
+	margin-right: 10%;
+}
+.picsection4{
+	width: 10vw;
+	border-radius: 50%;
+}
+.textsection4{
+	margin-left: 10%;
+	width: 70%;
+	font-family: 'Montserrat', sans-serif ;
+	font-size: 13px; 
+}
+
+@media(max-width: 900px){
+	.section4{
+		display: flex;
+		justify-content: center;
+	}
+	.blocsection4{
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin: 0px;
+		margin-bottom: 30px;
+	}
+	.blocsection4right{
+		width: 100%;
+		flex-direction: row-reverse;
+		margin: 0px;
+		margin-bottom: 30px;
+	}
+
+	.picsection4{
+		width: 30%;
+	}
+	
+
+}
+/* Section 5 -----------------------*/
+.section5{
+	background-color: #2A494F;
+	width: 100vw;
+}
+
+.logofooter{
+	width: 5%;
+	border-radius: 10%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.insta{
+	width: 5%;
+	margin-bottom: 30px;
+}
+.localisation{
+	width: 5%;
+	margin-bottom: 30px;
+}
+.picto{
+	display: flex;
+	justify-content: center;
+}
+
+/* Footer --------------------------*/
+footer{
+	width: 100vw;
+	height: 5vh;
+	background-color: #0C0B0A;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+footer a{
+	color: #438A94;
+	font-size: 13px;
+	font-family: 'Montserrat', sans-serif ;
+	font-weight: bolder;
+}
